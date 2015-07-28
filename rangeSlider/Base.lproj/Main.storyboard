@@ -2,6 +2,8 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -16,28 +18,48 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sJN-6g-xpO" customClass="NMRangeSlider">
-                                <rect key="frame" x="55" y="187" width="490" height="34"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJN-6g-xpO" customClass="NMRangeSlider">
+                                <rect key="frame" x="55" y="179" width="490" height="34"/>
                                 <connections>
                                     <action selector="labelSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="IQr-e5-P6Q"/>
                                 </connections>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGC-Yt-DwK">
-                                <rect key="frame" x="55" y="158" width="29" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGC-Yt-DwK">
+                                <rect key="frame" x="43" y="158" width="29" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="29" id="Kox-8r-sHA"/>
+                                    <constraint firstAttribute="height" constant="21" id="zJl-Z6-kuK"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReD-3Y-o1q">
-                                <rect key="frame" x="516" y="158" width="29" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReD-3Y-o1q">
+                                <rect key="frame" x="529" y="158" width="29" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k1l-wU-9cv" customClass="CERangeSlider">
+                                <rect key="frame" x="69" y="410" width="449" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sJN-6g-xpO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1e6-xo-XAt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="sJN-6g-xpO" secondAttribute="bottom" constant="387" id="DFB-7Q-LUI"/>
+                            <constraint firstItem="ReD-3Y-o1q" firstAttribute="baseline" secondItem="cGC-Yt-DwK" secondAttribute="baseline" id="FA0-ED-Lac"/>
+                            <constraint firstItem="ReD-3Y-o1q" firstAttribute="firstBaseline" secondItem="cGC-Yt-DwK" secondAttribute="firstBaseline" id="Ro7-Mc-d6I"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ReD-3Y-o1q" secondAttribute="trailing" constant="26" id="goc-Z8-mxR"/>
+                            <constraint firstItem="cGC-Yt-DwK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="138" id="mOK-T8-cgO"/>
+                            <constraint firstItem="cGC-Yt-DwK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="o80-84-4MQ"/>
+                            <constraint firstItem="sJN-6g-xpO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="39" id="ufJ-Hg-sla"/>
+                            <constraint firstItem="sJN-6g-xpO" firstAttribute="top" secondItem="cGC-Yt-DwK" secondAttribute="bottom" id="y5n-pO-IU4"/>
+                        </constraints>
                     </view>
                     <connections>
+                        <outlet property="_rangeSlider" destination="k1l-wU-9cv" id="oF8-zS-bYG"/>
                         <outlet property="labelSlider" destination="sJN-6g-xpO" id="hXA-KJ-HeC"/>
                         <outlet property="lowerLabel" destination="cGC-Yt-DwK" id="1Wn-aM-VC2"/>
                         <outlet property="upperLabel" destination="ReD-3Y-o1q" id="Ssw-Af-0QG"/>
@@ -45,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="303" y="357"/>
+            <point key="canvasLocation" x="326" y="366"/>
         </scene>
     </scenes>
 </document>
