@@ -19,7 +19,7 @@
     [self configureLabelSlider];
     
     
-    NSUInteger margin = 50;
+    NSUInteger margin = 20;
     CGRect sliderFrame = CGRectMake(margin, margin, self.view.frame.size.width - margin * 2, 30);
     self._rangeSlider = [[CERangeSlider alloc] initWithFrame:sliderFrame];
     
