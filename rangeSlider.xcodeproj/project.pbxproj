@@ -45,6 +45,9 @@
 		128AB85D1B68213D000C8542 /* CERangeSliderKnobLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 128AB8581B68213D000C8542 /* CERangeSliderKnobLayer.m */; };
 		128AB85E1B68213D000C8542 /* CERangeSlider.m in Sources */ = {isa = PBXBuildFile; fileRef = 128AB85A1B68213D000C8542 /* CERangeSlider.m */; };
 		128AB85F1B68213D000C8542 /* CERangeSliderTrackLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 128AB85C1B68213D000C8542 /* CERangeSliderTrackLayer.m */; };
+		128B5CE31B7E347500E4FEF8 /* blue.png in Resources */ = {isa = PBXBuildFile; fileRef = 128B5CE21B7E347500E4FEF8 /* blue.png */; };
+		128B5CE51B7E352400E4FEF8 /* outline.png in Resources */ = {isa = PBXBuildFile; fileRef = 128B5CE41B7E352400E4FEF8 /* outline.png */; };
+		128B5CE71B7E361800E4FEF8 /* knob.png in Resources */ = {isa = PBXBuildFile; fileRef = 128B5CE61B7E361800E4FEF8 /* knob.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +109,9 @@
 		128AB85A1B68213D000C8542 /* CERangeSlider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CERangeSlider.m; sourceTree = "<group>"; };
 		128AB85B1B68213D000C8542 /* CERangeSliderTrackLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CERangeSliderTrackLayer.h; sourceTree = "<group>"; };
 		128AB85C1B68213D000C8542 /* CERangeSliderTrackLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CERangeSliderTrackLayer.m; sourceTree = "<group>"; };
+		128B5CE21B7E347500E4FEF8 /* blue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue.png; sourceTree = "<group>"; };
+		128B5CE41B7E352400E4FEF8 /* outline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = outline.png; sourceTree = "<group>"; };
+		128B5CE61B7E361800E4FEF8 /* knob.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = knob.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,11 +212,14 @@
 				128AB8361B67F638000C8542 /* slider-default-track.png */,
 				128AB8371B67F638000C8542 /* slider-default-track@2x.png */,
 				128AB8381B67F638000C8542 /* slider-default-trackCrossedOver.png */,
+				128B5CE21B7E347500E4FEF8 /* blue.png */,
 				128AB8391B67F638000C8542 /* slider-default-trackCrossedOver@2x.png */,
 				128AB83A1B67F638000C8542 /* slider-default-trackBackground.png */,
 				128AB83B1B67F638000C8542 /* slider-default_trackBackground@2x.png */,
 				128AB8221B67F62E000C8542 /* slider-metal-handle-highlighted.png */,
 				128AB8231B67F62E000C8542 /* slider-metal-handle-highlighted@2x.png */,
+				128B5CE41B7E352400E4FEF8 /* outline.png */,
+				128B5CE61B7E361800E4FEF8 /* knob.png */,
 				128AB8241B67F62E000C8542 /* slider-metal-handle.png */,
 				128AB8251B67F62E000C8542 /* slider-metal-handle@2x.png */,
 				128AB8261B67F62E000C8542 /* slider-metal-track.png */,
@@ -321,6 +330,7 @@
 				128AB83E1B67F638000C8542 /* slider-default-handle.png in Resources */,
 				128AB8311B67F62E000C8542 /* slider-metal-trackBackground@2x.png in Resources */,
 				128AB8401B67F638000C8542 /* slider-default-track.png in Resources */,
+				128B5CE71B7E361800E4FEF8 /* knob.png in Resources */,
 				128AB8501B67F641000C8542 /* slider-default7-trackCrossedOver.png in Resources */,
 				128AB83F1B67F638000C8542 /* slider-default-handle@2x.png in Resources */,
 				128AB8421B67F638000C8542 /* slider-default-trackCrossedOver.png in Resources */,
@@ -341,9 +351,11 @@
 				128AB83D1B67F638000C8542 /* slider-default-handle-highlighted@2x.png in Resources */,
 				128AB82F1B67F62E000C8542 /* slider-metal-track@2x.png in Resources */,
 				128AB8061B67F5B9000C8542 /* Images.xcassets in Resources */,
+				128B5CE31B7E347500E4FEF8 /* blue.png in Resources */,
 				128AB83C1B67F638000C8542 /* slider-default-handle-highlighted.png in Resources */,
 				128AB82C1B67F62E000C8542 /* slider-metal-handle.png in Resources */,
 				128AB82E1B67F62E000C8542 /* slider-metal-track.png in Resources */,
+				128B5CE51B7E352400E4FEF8 /* outline.png in Resources */,
 				128AB82B1B67F62E000C8542 /* slider-metal-handle-highlighted@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

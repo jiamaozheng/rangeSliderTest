@@ -2,8 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -11,67 +9,72 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="Qz7-jW-n7f"/>
+                        <viewControllerLayoutGuide type="bottom" id="EBr-mk-hZP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJN-6g-xpO" customClass="NMRangeSlider">
-                                <rect key="frame" x="55" y="179" width="490" height="34"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k1l-wU-9cv" userLabel="CE range slider" customClass="CERangeSlider">
+                                <rect key="frame" x="28" y="424" width="276" height="48"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="aaa:" destination="BYZ-38-t0r" eventType="valueChanged" id="KiN-wz-FeU"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kae-Rw-tfv" customClass="NMRangeSlider">
+                                <rect key="frame" x="16" y="151" width="300" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="testedChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="vZa-b3-X5l"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="88" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGC-Yt-DwK">
+                                <rect key="frame" x="16" y="294" width="29" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReD-3Y-o1q">
+                                <rect key="frame" x="275" y="289" width="39" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sJN-6g-xpO" customClass="NMRangeSlider">
+                                <rect key="frame" x="16" y="318" width="288" height="30"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <action selector="labelSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="IQr-e5-P6Q"/>
                                 </connections>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cGC-Yt-DwK">
-                                <rect key="frame" x="43" y="158" width="29" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="29" id="NrM-Ax-vVH"/>
-                                    <constraint firstAttribute="height" constant="21" id="zgU-GK-mZS"/>
-                                </constraints>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CoH-Xb-ayJ">
+                                <rect key="frame" x="16" y="532" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ReD-3Y-o1q">
-                                <rect key="frame" x="529" y="158" width="29" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANw-pn-2S8">
+                                <rect key="frame" x="262" y="532" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k1l-wU-9cv" customClass="CERangeSlider">
-                                <rect key="frame" x="69" y="410" width="449" height="40"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="sJN-6g-xpO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D4I-Ah-1gq"/>
-                            <constraint firstAttribute="bottom" secondItem="sJN-6g-xpO" secondAttribute="bottom" constant="387" id="EBm-nr-ASW"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ReD-3Y-o1q" secondAttribute="trailing" constant="26" id="Ejy-vw-VIV"/>
-                            <constraint firstItem="ReD-3Y-o1q" firstAttribute="baseline" secondItem="cGC-Yt-DwK" secondAttribute="baseline" id="QGH-Y4-6Pj"/>
-                            <constraint firstItem="sJN-6g-xpO" firstAttribute="top" secondItem="cGC-Yt-DwK" secondAttribute="bottom" id="cjc-73-V33"/>
-                            <constraint firstItem="ReD-3Y-o1q" firstAttribute="firstBaseline" secondItem="cGC-Yt-DwK" secondAttribute="firstBaseline" id="d7D-Mb-ZIJ"/>
-                            <constraint firstItem="cGC-Yt-DwK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="27" id="eBn-NF-9US"/>
-                            <constraint firstItem="sJN-6g-xpO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="39" id="fNL-A1-W0n"/>
-                            <constraint firstItem="k1l-wU-9cv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="53" id="h7G-bM-yw6"/>
-                            <constraint firstItem="k1l-wU-9cv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="410" id="tDz-rA-0Xg"/>
-                            <constraint firstItem="cGC-Yt-DwK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="138" id="tWu-WQ-3un"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="k1l-wU-9cv" secondAttribute="bottom" constant="150" id="xLj-h2-9xu"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="k1l-wU-9cv" secondAttribute="trailing" constant="66" id="yLi-fl-Bym"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="_rangeSlider" destination="k1l-wU-9cv" id="oF8-zS-bYG"/>
                         <outlet property="labelSlider" destination="sJN-6g-xpO" id="hXA-KJ-HeC"/>
                         <outlet property="lowerLabel" destination="cGC-Yt-DwK" id="1Wn-aM-VC2"/>
+                        <outlet property="testSlider" destination="Kae-Rw-tfv" id="B6i-uh-Ohd"/>
                         <outlet property="upperLabel" destination="ReD-3Y-o1q" id="Ssw-Af-0QG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="326" y="366"/>
+            <point key="canvasLocation" x="-283" y="369"/>
         </scene>
     </scenes>
 </document>

@@ -20,14 +20,14 @@
                                                         cornerRadius:knobFrame.size.height * self.slider.curvatiousness / 2.0];
     
     // 1) fill - with a subtle shadow
-    CGContextSetShadowWithColor(ctx, CGSizeMake(0, 1), 1.0, [UIColor grayColor].CGColor);
+    CGContextSetShadowWithColor(ctx, CGSizeMake(0, 1), 1.0, [UIColor blueColor].CGColor);
     CGContextSetFillColorWithColor(ctx, self.slider.knobColour.CGColor);
     CGContextAddPath(ctx, knobPath.CGPath);
     CGContextFillPath(ctx);
     
     // 2) outline
-    CGContextSetStrokeColorWithColor(ctx, [UIColor grayColor].CGColor);
-    CGContextSetLineWidth(ctx, 0.5);
+    CGContextSetStrokeColorWithColor(ctx, [UIColor blueColor].CGColor);
+    CGContextSetLineWidth(ctx, 2);
     CGContextAddPath(ctx, knobPath.CGPath);
     CGContextStrokePath(ctx);
     
@@ -60,14 +60,14 @@
     CGColorSpaceRelease(myColorspace);
     CGContextRestoreGState(ctx);
     
-    // 4) highlight
-    if (self.highlighted)
-    {
-        // fill
-        CGContextSetFillColorWithColor(ctx, [UIColor colorWithWhite:0.0 alpha:0.1].CGColor);
-        CGContextAddPath(ctx, knobPath.CGPath);
-        CGContextFillPath(ctx);
-    }
+//    // 4) highlight
+//    if (self.highlighted)
+//    {
+//        // fill
+//        CGContextSetFillColorWithColor(ctx, [UIColor colorWithWhite:0.0 alpha:0.1].CGColor);
+//        CGContextAddPath(ctx, knobPath.CGPath);
+//        CGContextFillPath(ctx);
+//    }
 }
 
 @end

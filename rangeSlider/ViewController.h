@@ -17,6 +17,13 @@
 @property (weak, nonatomic) IBOutlet UILabel *upperLabel;
 @property (weak, nonatomic) IBOutlet CERangeSlider *_rangeSlider;
 
+@property (weak, nonatomic) IBOutlet NMRangeSlider *testSlider;
+@property (strong, nonatomic)  UILabel *oneLabel;
+@property (strong, nonatomic)  UILabel *secondLabel;
+
+- (IBAction)testedChanged:(NMRangeSlider *)sender;
+- (IBAction)aaa:(CERangeSlider *)sender;
+
 - (IBAction)labelSliderChanged:(NMRangeSlider*)sender;
 @end
 

@@ -48,8 +48,8 @@
  
     // outline
     CGContextAddPath(ctx, switchOutline.CGPath);
-    CGContextSetStrokeColorWithColor(ctx, [UIColor blackColor].CGColor);
-    CGContextSetLineWidth(ctx, 0.5);
+    CGContextSetStrokeColorWithColor(ctx, [UIColor blueColor].CGColor);
+    CGContextSetLineWidth(ctx, 5);
     CGContextStrokePath(ctx);
     
 }

@@ -60,18 +60,18 @@ GENERATE_SETTER(upperValue, float, setUpperValue, setLayerFrames)
 {
     self = [super initWithFrame:frame];
     if (self) {
-        _trackHighlightColour = [UIColor colorWithRed:0.0 green:0.45 blue:0.94 alpha:1.0];
-        _trackColour = [UIColor colorWithWhite:0.9 alpha:1.0];
-        _knobColour = [UIColor whiteColor];
+        _trackHighlightColour = [UIColor whiteColor];
+        _trackColour = [UIColor whiteColor];
+        _knobColour = [UIColor blueColor];
         _curvatiousness = 1.0;
-        _maximumValue = 10.0;
+        _maximumValue = 100.0;
         _minimumValue = 0.0;
         
         // Initialization code
-        _maximumValue = 10.0;
+        _maximumValue = 100.0;
         _minimumValue = 0.0;
-        _upperValue = 8.0;
-        _lowerValue = 2.0;
+        _upperValue = 100.0;
+        _lowerValue = 0.0;
         
         _trackLayer = [CERangeSliderTrackLayer layer];
         _trackLayer.slider = self;
